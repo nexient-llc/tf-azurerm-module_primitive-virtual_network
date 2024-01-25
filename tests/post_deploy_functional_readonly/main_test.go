@@ -25,11 +25,11 @@ const (
 	infraTFVarFileNameDefault        = "test.tfvars"
 )
 
-func TestSkeletonModule(t *testing.T) {
+func TestVnetModule(t *testing.T) {
 
 	ctx := types.TestContext{
 		TestConfig: &testimpl.ThisTFModuleConfig{},
 	}
 	lib.RunSetupTestTeardown(t, testConfigsExamplesFolderDefault, infraTFVarFileNameDefault, ctx,
-		testimpl.TestComposableComplete)
+		testimpl.TestVnet)
 }

@@ -15,8 +15,10 @@ func TestVnet(t *testing.T, ctx types.TestContext) {
 	})
 
 	t.Run("TestVnet", func(t *testing.T) {
-		vnetId := terraform.Output(t, ctx.TerratestTerraformOptions, "id")
+		vnetId := terraform.Output(t, ctx.TerratestTerraformOptions, "vnet_id")
+		rgId := terraform.Output(t, ctx.TerratestTerraformOptions, "resource_group_id")
 
 		assert.NotEmpty(t, vnetId, "VNet ID must not be empty")
+		assert.NotEmpty(t, rgId, "Resource Group ID must not be empty")
 	})
 }
