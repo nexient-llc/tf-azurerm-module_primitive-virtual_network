@@ -10,6 +10,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-output "id" {
-  value = ""
+output "vnet_id" {
+  value = module.vnet.vnet_id
+}
+
+output "subnet_ids" {
+  value = module.vnet.vnet_subnets
+}
+
+output "resource_group_id" {
+  value = module.resource_group.id
 }

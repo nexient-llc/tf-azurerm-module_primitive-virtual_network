@@ -10,8 +10,27 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-resource "random_string" "string" {
-  length  = var.length
-  numeric = var.number
-  special = var.special
+module "virtual_network" {
+  source  = "Azure/vnet/azurerm"
+  version = "4.1.0"
+
+  resource_group_name                                   = var.resource_group_name
+  vnet_location                                         = var.vnet_location
+  vnet_name                                             = var.vnet_name
+  address_space                                         = var.address_space
+  subnet_names                                          = var.subnet_names
+  subnet_prefixes                                       = var.subnet_prefixes
+  bgp_community                                         = var.bgp_community
+  ddos_protection_plan                                  = var.ddos_protection_plan
+  dns_servers                                           = var.dns_servers
+  nsg_ids                                               = var.nsg_ids
+  route_tables_ids                                      = var.route_tables_ids
+  subnet_delegation                                     = var.subnet_delegation
+  subnet_enforce_private_link_endpoint_network_policies = var.subnet_enforce_private_link_endpoint_network_policies
+  subnet_enforce_private_link_service_network_policies  = var.subnet_enforce_private_link_service_network_policies
+  subnet_service_endpoints                              = var.subnet_service_endpoints
+  tags                                                  = var.tags
+  tracing_tags_enabled                                  = var.tracing_tags_enabled
+  tracing_tags_prefix                                   = var.tracing_tags_prefix
+  use_for_each                                          = var.use_for_each
 }
