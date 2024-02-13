@@ -68,7 +68,7 @@ variable "resource_names_map" {
 
 variable "address_space" {
   type        = list(string)
-  default     = ["10.0.0.0/16"]
+  default     = ["10.6.0.0/16"]
   description = "The address space that is used by the virtual network."
 }
 
@@ -80,7 +80,7 @@ variable "subnet_names" {
 
 variable "subnet_prefixes" {
   type        = list(string)
-  default     = ["10.0.1.0/24", "10.0.2.0/24"]
+  default     = ["10.6.1.0/24", "10.6.2.0/24"]
   description = "The address prefix to use for the subnet."
 }
 

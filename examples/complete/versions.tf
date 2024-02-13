@@ -10,18 +10,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-output "vnet_id" {
-  value = module.vnet.vnet_id
-}
+terraform {
+  required_version = "<= 1.5.5"
 
-output "subnet_ids" {
-  value = module.vnet.vnet_subnets
-}
-
-output "resource_group_id" {
-  value = module.resource_group.id
-}
-
-output "subnet_id_name" {
-  value = module.vnet.vnet_subnets_name_id
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = ">=3.67.0"
+    }
+  }
 }
