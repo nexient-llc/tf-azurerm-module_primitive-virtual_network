@@ -27,9 +27,6 @@ const (
 
 func TestVnetModule(t *testing.T) {
 
-	//ctx := types.TestContext{
-	//	TestConfig: &testimpl.ThisTFModuleConfig{},
-	//}
 	ctx := types.CreateTestContextBuilder().
 		SetTestConfig(&testimpl.ThisTFModuleConfig{}).
 		SetTestConfigFileName(infraTFVarFileNameDefault).

@@ -5,7 +5,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | <= 1.5.5 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.5.0, <= 1.5.5 |
 | <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | >=3.67.0 |
 
 ## Providers
@@ -44,7 +44,9 @@ No resources.
 | Name | Description |
 |------|-------------|
 | <a name="output_vnet_id"></a> [vnet\_id](#output\_vnet\_id) | n/a |
+| <a name="output_vnet_name"></a> [vnet\_name](#output\_vnet\_name) | n/a |
 | <a name="output_subnet_ids"></a> [subnet\_ids](#output\_subnet\_ids) | n/a |
 | <a name="output_resource_group_id"></a> [resource\_group\_id](#output\_resource\_group\_id) | n/a |
+| <a name="output_resource_group_name"></a> [resource\_group\_name](#output\_resource\_group\_name) | n/a |
 | <a name="output_subnet_id_name"></a> [subnet\_id\_name](#output\_subnet\_id\_name) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
