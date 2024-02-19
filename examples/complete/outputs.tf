@@ -14,10 +14,22 @@ output "vnet_id" {
   value = module.vnet.vnet_id
 }
 
+output "vnet_name" {
+  value = module.vnet.vnet_name
+}
+
 output "subnet_ids" {
   value = module.vnet.vnet_subnets
 }
 
 output "resource_group_id" {
   value = module.resource_group.id
+}
+
+output "resource_group_name" {
+  value = module.resource_group.name
+}
+
+output "subnet_id_name" {
+  value = module.vnet.vnet_subnets_name_id
 }

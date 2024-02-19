@@ -40,9 +40,9 @@ module "vnet" {
   vnet_location                                         = var.region
   resource_group_name                                   = module.resource_group.name
   vnet_name                                             = module.resource_names["vnet"].standard
-  address_space                                         = ["10.0.0.0/16"]
-  subnet_names                                          = ["subnet-1", "subnet-2"]
-  subnet_prefixes                                       = ["10.0.5.0/24", "10.0.6.0/24"]
+  address_space                                         = var.address_space
+  subnet_names                                          = var.subnet_names
+  subnet_prefixes                                       = var.subnet_prefixes
   bgp_community                                         = null
   ddos_protection_plan                                  = null
   dns_servers                                           = []
